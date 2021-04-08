@@ -13,11 +13,12 @@ import Turnos from "./components/Turnos";
 import Ventas from "./components/Ventas";
 import Login from "./components/Login";
 
+
 function App() {
   return (
     <Router>
-      <Login /> 
-{/*      <div className="container-fluid">
+{/*       <Login /> */}
+      <div className="container-fluid">
         <div className="row mt-5 justify-content-between">
           <div className="btn-group col-7">
             <NavLink to="/" className="btn btn-primary" activeClassName="active">Inicio</NavLink>
@@ -63,7 +64,7 @@ function App() {
             <Inicio />
           </Route>
         </Switch> 
-        </div>      */}
+        </div>      
     </Router>
   );
 }
