@@ -11,13 +11,15 @@ import Clientes from "./components/Clientes";
 import Proveedores from "./components/Proveedores";
 import Turnos from "./components/Turnos";
 import Ventas from "./components/Ventas";
+import Login from "./components/Login";
 
 function App() {
   return (
     <Router>
-      <div className="container-fluid mt-5">
-        <div className="row">
-          <div className="btn-group col-4">
+      <Login /> 
+{/*      <div className="container-fluid">
+        <div className="row mt-5 justify-content-between">
+          <div className="btn-group col-7">
             <NavLink to="/" className="btn btn-primary" activeClassName="active">Inicio</NavLink>
             <NavLink to="/ventas" className="btn btn-primary" activeClassName="active">Ventas</NavLink>
             <NavLink to="/turnos" className="btn btn-primary" activeClassName="active">Turnos</NavLink>
@@ -25,8 +27,19 @@ function App() {
             <NavLink to="/clientes" className="btn btn-primary" activeClassName="active">Clientes</NavLink>
             <NavLink to="/proveedores" className="btn btn-primary" activeClassName="active">Proveedores</NavLink>
           </div>
-          <div className="col-2 justify-content-between align-items-center">
-            <button className="btn btn-primary ml-auto">Boton</button>
+          <div className="col-1">
+            <div class="btn-group">
+              <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                Pelado
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Editar Perfil</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                <li><hr class="dropdown-divider"></hr></li>
+                <li><a class="dropdown-item" href="#">Cerrar Sesión</a></li>
+              </ul>
+            </div>
           </div>
         </div>
         <hr />
@@ -50,7 +63,7 @@ function App() {
             <Inicio />
           </Route>
         </Switch> 
-      </div>
+        </div>      */}
     </Router>
   );
 }
