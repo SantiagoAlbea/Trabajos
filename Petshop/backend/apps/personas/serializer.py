@@ -12,6 +12,7 @@ class DomicilioSerializer(serializers.ModelSerializer):
         ]
 
 class ClienteSerializer(serializers.ModelSerializer):
+    domicilio = DomicilioSerializer()
     
     class Meta:
         model = Cliente
@@ -26,7 +27,7 @@ class ClienteSerializer(serializers.ModelSerializer):
         ]
 
 class PeluqueroSerializer(serializers.ModelSerializer):
-    
+    domicilio = DomicilioSerializer()
     class Meta:
         model = Peluquero
         fields = [
@@ -37,7 +38,7 @@ class PeluqueroSerializer(serializers.ModelSerializer):
         ]
 
 class ProveedorSerializer(serializers.ModelSerializer):
-    
+    domicilio = DomicilioSerializer()    
     class Meta:
         model = Proveedor
         fields = [

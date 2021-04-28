@@ -11,6 +11,9 @@ class Articulo(models.Model):
         on_delete=models.PROTECT,
     )
 
+class MetodoDePago(models.Model):
+    nombre = models.CharField(max_length=30)
+
 class Venta(models.Model):
     fecha = models.DateField()
     hora = models.TimeField()
@@ -25,6 +28,10 @@ class Venta(models.Model):
         blank=True, 
         null=True,
     )
+    metodoDePago = models.ForeignKey(
+        MetodoDePago, 
+        on_delete=models.PROTECT,
+        )
 
 class VentaDetalle(models.Model):
     cantidad = models.IntegerField()

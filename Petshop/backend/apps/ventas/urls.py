@@ -1,5 +1,5 @@
 from rest_framework.routers import DefaultRouter
-from .api import VentaViewSet, VentaDetalleViewSet, ArticuloViewSet
+from .api import VentaViewSet, VentaDetalleViewSet, ArticuloViewSet, MetodoDePagoViewSet
 from django.urls import path
 
 app_name = "ventas"
@@ -7,6 +7,7 @@ app_name = "ventas"
 router = DefaultRouter()
 
 router.register(r'ventas', VentaViewSet)
+router.register(r'metodosDePago', MetodoDePagoViewSet)
 router.register(r'ventadetalles', VentaDetalleViewSet)
 router.register(r'articulos', ArticuloViewSet)
 

@@ -36,6 +36,7 @@ from rest_framework.response import Response
 from rest_framework import permissions
 #from drf_yasg.views import get_schema_view
 #from drf_yasg import openapi
+from rest_framework.authtoken import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -44,6 +45,7 @@ urlpatterns = [
     path('api/personas/', include('apps.personas.urls', namespace='personas')),
     path('api/ventas/', include('apps.ventas.urls', namespace='ventas')),
     path('api/turnos/', include('apps.turnos.urls', namespace='turnos')),
+    path('api-token-auth/', views.obtain_auth_token, name="api-token-auth"),
 
 #    path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
  #   path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
